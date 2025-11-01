@@ -1,0 +1,195 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;700&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Quicksand', sans-serif;
+  color: #333;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+
+body {
+
+  background: linear-gradient(-45deg, #FFC0CB, #ADD8E6, #90EE90, #F0E68C);
+  background-size: 400% 400%;
+  
+  animation: pastelShift 20s ease infinite;
+}
+
+@keyframes pastelShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+
+@keyframes fadeInFromTop {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.main-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+
+.navbar {
+  background: rgba(255, 255, 255, 0.7); 
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  
+  animation: fadeInFromTop 0.5s ease-out forwards;
+}
+
+.navbar-logo {
+  display: none; 
+}
+
+.nav-menu {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links {
+  color: #6A5ACD; 
+  font-weight: 700;
+  text-decoration: none;
+  padding: 15px 20px;
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  position: relative;
+}
+
+.nav-links:hover {
+  color: #E6E6FA; 
+  background: #6A5ACD; 
+  border-radius: 5px;
+}
+
+
+.nav-links.active {
+  color: white;
+  background: #B0C4DE;
+  border-radius: 5px;
+}
+
+
+.posts-grid {
+  animation: fadeInFromTop 0.8s ease-out 0.4s forwards; 
+  opacity: 0; 
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 25px;
+  margin-top: 30px;
+}
+
+.post-card-home {
+  background: #f7f7f7;
+  border-radius: 15px;
+  box-shadow: 0 8px 25px rgba(106, 17, 203, 0.1); 
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  overflow: hidden;
+  border-left: 5px solid #ADD8E6; 
+}
+
+.post-card-home:hover {
+  transform: translateY(-8px); 
+  box-shadow: 0 15px 40px rgba(106, 17, 203, 0.2);
+}
+
+.post-card-home h2 {
+  color: #6A5ACD;
+  border-bottom: 1px solid #E6E6FA;
+}
+
+
+.delete-btn-home {
+  background: #FF6961;
+  color: white;
+  opacity: 0.9;
+  transition: all 0.2s ease;
+}
+
+.delete-btn-home:hover {
+  background: #C0392B; 
+  transform: scale(1.2) rotate(5deg); 
+}
+
+.post-card-home {
+    position: relative; 
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(106, 17, 203, 0.1);
+    padding: 20px;
+    transition: all 0.3s ease;
+    overflow: hidden;
+    border-left: 5px solid #ADD8E6; 
+}
+
+.delete-btn-home {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: #FF6961; 
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    font-size: 1.5rem;
+    line-height: 33px;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+    opacity: 1; 
+    transform: scale(1);
+}
+
+.delete-btn-home:hover {
+    background: #C0392B; 
+    transform: scale(1.1) rotate(5deg);
+}
+
+.posts-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 25px;
+    margin-top: 30px;
+}
+.main-content {
+  padding: 20px; 
+}
+
+.navbar-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
