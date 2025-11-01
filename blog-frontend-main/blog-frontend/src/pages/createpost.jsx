@@ -4,7 +4,7 @@ import axios from 'axios';
 import { useNavigate } from 'react-router-dom'; 
 import './createpost.css'; 
 
-const API_URL = 'http://localhost:5000/posts';
+const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:5000/posts';
 
 const CreatePost = () => {
   const [title, setTitle] = useState('');

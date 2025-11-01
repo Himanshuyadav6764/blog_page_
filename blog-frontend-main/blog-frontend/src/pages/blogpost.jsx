@@ -3,7 +3,7 @@ import axios from 'axios';
 import { useParams, useNavigate, Link } from 'react-router-dom';
 import './blogpost.css';
 
-const API_URL = 'http://localhost:5000/posts';
+const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:5000/posts';
 
 const BlogPost = () => {
   const { id } = useParams();

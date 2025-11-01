@@ -1,0 +1,7 @@
+# Railway Monorepo Configuration
+
+[build]
+builder = "NIXPACKS"
+
+[deploy]
+startCommand = "node server.js"
